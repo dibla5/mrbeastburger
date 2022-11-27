@@ -1,0 +1,15 @@
+LEGENDA
+/../ = CHIAVE
+^..^ = SOTTOCHIAVE
+
+Utente(/username/,nome,cognome,numTelefono,email)
+CartaDiCredito(/numCarta/,cvv,dataScadenza,ente)
+UtenteHaCartaDiCredito(/^usernameUtente^,^cartaUtente^/)
+Prenotazione(/numPrenotazione/,ora,dataPrenotazione,^usernameUtente^,^numTavoloPrenotato^)
+Tavolo(/numTavolo/,numPosti)
+Ordine(/id/,dataOrdine,ora,note,^usernameUtente^,^tesseraFattorino^)
+Luogo(/via,numCivico/,cap)
+OrdineDirettoInLuogo(/^idOrdine^,^viaLuogo,numCivicoLuogo^/)
+Portata(/id/,prezzo,tipologia,descrizione,allergeni)
+OrdineHaPortata(/^idOrdine^,^idPortata^/)
+Fattorino(/tessera/,veicolo,nome,cognome)
